@@ -1,0 +1,272 @@
+:root {
+	/* Variables para colores oscuros */
+	--Dark-blue-100: #609ed4;
+	--Dark-blue-200: #356ea9;
+	--Dark-blue-300: #0a3871;
+	--Dark-blue-400: #072b61;
+	--Dark-blue-500: #052051;
+
+	/* Variables para colores claros */
+	--Light-blue-100: #f3f5fc;
+	--Light-blue-200: #eff1fa;
+	--Light-blue-300: #e9ecf8;
+	--Light-blue-400: #aab2d5;
+	--Light-blue-500: #757fb2;
+
+	/* Variables para tonos de gris */
+	--Gray-100: #ced4da;
+	--Gray-200: #adb5bd;
+	--Gray-300: #868e96;
+	--Gray-400: #495057;
+	--Gray-500: #343a40;
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+	margin: 40px 40px; /* Margen exterior */
+	background-color: var(--Light-blue-100); /* Fondo */
+	font-family: "Inter", sans-serif; /* Fuente */
+}
+
+/* Estilos para el contenedor principal */
+main {
+	max-width: 1440px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto; /* Centrar en la pantalla */
+}
+
+/* Estilos para botones */
+button {
+	box-sizing: border-box;
+	width: 328px;
+	border-radius: 24px;
+	border: 1px solid var(--Dark-blue-300);
+	padding: 24px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+/* Estilos para el logo en el encabezado */
+.logo-container img {
+	height: 48px;
+	margin: 0;
+}
+
+/* Estilos para la sección 1 del contenido principal */
+.section1 {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	height: calc(92vh - 20px); /* Altura dinámica */
+}
+
+.s1-container {
+	display: flex;
+	flex-direction: column;
+	width: 680px;
+	justify-content: space-between;
+	padding-bottom: 32px;
+	margin-left: 100px;
+}
+
+/* Estilos para el área de texto */
+.text-area {
+	display: block;
+	font-family: "Inter", sans-serif;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border: none;
+	background-color: var(--Light-blue-100);
+	color: var(--Dark-blue-300);
+	line-height: 150%;
+	font-size: 32px;
+	resize: none;
+	margin-top: 128px;
+}
+.text-area::placeholder {
+	color: var(--Dark-blue-300);
+}
+
+/* Estilos para el mensaje de alerta */
+.texto-alerta {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 12px;
+	color: var(--Gray-300);
+	padding-bottom: 16px;
+}
+.texto-alerta p {
+	margin-left: 4px;
+}
+
+/* Estilos para los botones dentro de la sección 1 */
+.botones-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.boton-encriptar {
+	border: 1px var(--Dark-blue-300);
+	background: #0a3871;
+	color: white;
+}
+.boton-encriptar:hover {
+	background: var(--Dark-blue-400);
+}
+
+.boton-desencriptar {
+	background-color: var(--Light-blue-200);
+	color: var(--Dark-blue-300);
+}
+.boton-desencriptar:hover {
+	background-color: var(--Light-blue-300);
+}
+
+/* Estilos para la sección 2 del contenido principal */
+.section2 {
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	max-height: calc(92vh - 20px); /* Altura máxima */
+}
+
+.s2-container {
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 32px;
+	border-radius: 32px;
+	background-color: white;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos para el contenedor del texto transformado */
+.texto-transformado-container {
+	display: flex;
+	width: 100%;
+	max-height: 100%;
+	color: var(--Gray-400);
+	font-size: 24px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-bottom: 5px;
+	line-height: 150%;
+}
+.texto-transformado {
+	word-break: break-all;
+}
+
+/* Estilos para el mensaje de imagen no encontrada */
+.mensaje-imagen-no-encontrado {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mensaje-no-encontrado {
+	color: var(--Gray-500);
+	text-align: center;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+	padding: 0 32px;
+}
+
+.instrucciones {
+	margin-top: 16px;
+	color: var(--Dark-blue-400);
+	padding: 0 32px;
+	text-align: center;
+}
+
+.copiar-contenedor {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	margin-top: 32px;
+	visibility: hidden;
+	display: none;
+}
+
+.boton-copiar {
+	background-color: rgba(255, 255, 255, 0);
+	color: var(--Dark-blue-300);
+}
+
+.boton-copiar:hover {
+	background-color: var(--Light-blue-100);
+}
+
+/* Estilos para el pie de página */
+footer {
+	height: 2vh;
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+}
+
+.footer-container {
+	max-width: 1440;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-container a {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+@media (max-width: 1400px) {
+	/* Estilos responsivos para pantallas grandes */
+	body {
+		margin: 20px;
+	}
+	.section1 {
+		width: 100%;
+		flex-direction: column;
+	}
+	.s1-container {
+		width: 100%;
+		margin-left: 0;
+		flex-grow: 1;
+	}
+	.botones-container {
+		row-gap: 10px;
+	}
+	.section2 {
+		width: 100%;
+	}
+	.s2-container {
+		width: 100%;
+	}
+	.s2-container img {
+		display: none;
+	}
+	.copiar-contenedor {
+		display: none;
+	}
+	.boton-copiar {
+		width: 100%;
+	}
+}
+
+@media (max-width: 700px) {
+	/* Estilos responsivos para pantallas pequeñas */
+	button {
+		width: 100%;
+	}
+}

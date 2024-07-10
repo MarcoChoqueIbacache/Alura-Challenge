@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Codificación de caracteres y ajuste para dispositivos -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preconexión y carga de fuente desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Hojas de estilo para resetear y personalizar -->
+    <link rel="stylesheet" href="reset.css" /> <!-- Reset CSS -->
+    <link rel="stylesheet" href="style.css" /> <!-- Estilos personalizados -->
+
+    <!-- Título de la página -->
+    <title>Desafío 1 - Alura</title>
+</head>
+
+<body>
+    <!-- Script JavaScript externo -->
+    <script src="script.js"></script>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Sección 1: Ingreso de texto -->
+        <section class="section1">
+            <!-- Contenedor del logo -->
+            <div class="logo-container">
+                <img src="Images/Logo.png" alt="Imagen logo" />
+            </div>
+
+            <!-- Contenedor de la sección 1 -->
+            <div class="s1-container">
+                <!-- Área de texto para ingresar información -->
+                <textarea class="text-area" placeholder="Ingrese el texto aquí"></textarea>
+
+                <!-- Contenedor para alertas y botones -->
+                <div class="botones-texto-alerta">
+                    <!-- Alerta con imagen y mensaje -->
+                    <div class="texto-alerta">
+                        <img src="Images/Alerta.png" alt="Imagen Alerta" />
+                        <p>Solo letras minúsculas, sin acentos ni caracteres especiales</p>
+                    </div>
+
+                    <!-- Contenedor de botones de acción -->
+                    <div class="botones-container">
+                        <!-- Botón para encriptar -->
+                        <button class="boton-encriptar" onclick="botonEncriptar();">
+                            Encriptar
+                        </button>
+                        <!-- Botón para desencriptar -->
+                        <button class="boton-desencriptar" onclick="botonDesencriptar()">
+                            Desencriptar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Resultados y mensajes -->
+        <section class="section2">
+            <!-- Contenedor de la sección 2 -->
+            <div class="s2-container">
+                <!-- Contenedor del texto transformado -->
+                <div class="texto-transformado-container">
+                    <p class="texto-transformado"></p>
+                </div>
+
+                <!-- Mensaje de error si no se encuentra ningún mensaje -->
+                <div class="mensaje-imagen-no-encontrado">
+                    <img src="Images/Error-mensaje.png" alt="Mensaje no encontrado" />
+                    <p class="mensaje-no-encontrado">Ningún mensaje fue encontrado</p>
+                    <p class="instrucciones">Ingrese el texto que desees encriptar o desencriptar</p>
+                </div>
+
+                <!-- Contenedor para el botón de copiar -->
+                <div class="copiar-contenedor">
+                    <button onclick="copiar();" class="boton-copiar">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <!-- Contenedor del pie de página -->
+        <div class="footer-container">
+            <a href="https://github.com/marcochoqueibacache" target="_blank">
+                &copy Marco Choque Ibacache - 2024
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
